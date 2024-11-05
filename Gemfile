@@ -8,7 +8,7 @@ source "https://rubygems.org"
 
 gem "ruby-vips", "~>2.2.2"
 gem 'image_processing', '~> 1.2'
-gem 'bootstrap-sass', '~> 3.3.5'
+gem 'bootstrap-sass', '~> 3.4.1'
 gem "mini_magick"
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.2.1"
