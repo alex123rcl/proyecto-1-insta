@@ -1,0 +1,21 @@
+<h2>All Posts</h2>
+<% @posts.each do |post| %>
+  <div>
+    <% if post.image.attached? %>
+      <%= image_tag post.image.variant(resize_to_fill: [400, 400]) %>
+    <% else %>
+      <p>No image available</p>
+    <% end %>
+    <br>
+    <p><%= post.description %></p>
+    <div class="link">
+      <%= button_to "Destroy", post, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger" %>
+
+      <% if post.user == current_user %>
+        <%= link_to "Edit", edit_post_path(post), class: "btn btn-success" %>
+      <% end %>
+
+      <%= link_to "Show", post_path(post), class: "btn btn-info" %>
+    </div>
+  </div>
+<% end %>
